@@ -1,0 +1,1 @@
+export const backendRoute = import.meta.env.VITE_BACKEND_URL
