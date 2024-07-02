@@ -2,6 +2,7 @@ import './App.css';
 
 import Info from './components/Info';
 import Json from './components/Json';
+import SheetsLogo from '../public/sheets.svg';
 import Table from './components/Table';
 import axios from 'axios';
 import { backendRoute } from './routes';
@@ -90,7 +91,8 @@ function App() {
 
   return (
     <div>
-      <div className='bg-gray-800 p-4 text-white flex justify-center items-center drop-shadow-lg fixed w-full z-10'>
+      <div className='bg-gray-800 p-4 text-white flex justify-center items-center gap-4 drop-shadow-lg fixed w-full z-10'>
+        <img src={SheetsLogo} className='h-8' />
         <p className='text-3xl font-bold'>CONNECT SPREADSHEET</p>
       </div>
       <div className='container mx-auto py-8 px-4 flex flex-col items-center'>
