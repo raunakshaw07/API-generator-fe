@@ -1,5 +1,6 @@
 import './App.css';
 
+import APIInfo from './components/APIInfo';
 import Info from './components/Info';
 import Json from './components/Json';
 import SheetsLogo from '../public/sheets.svg';
@@ -154,28 +155,7 @@ function App() {
               </button>
             </div>
 
-            {/* <div className='grid grid-cols-4 gap-4 mt-4'>
-              <button className='bg-blue-300 p-2' onClick={async () => {
-                try {
-                  const response = await axios.get('http://localhost:5000/stocks');
-                  console.log(response.data);
-                } catch (err) {
-                  console.log(err);
-                }
-              }}>GET /stocks</button>
-              <button className='bg-blue-300 p-2'>GET /stocks/:id</button>
-              <button className='bg-blue-300 p-2'>POST /stocks</button>
-              <button className='bg-blue-300 p-2'>GET /stocks</button>
-            </div> */}
-
-            <div className='bg-white p-4 mt-4'>
-              <p>API Generated Successfully! To use <span className='font-semibold'>{backendRoute}</span> endpoint to make API calls</p>
-              <div className='flex gap-4 bg-blue-300/25 border border-blue-300 p-2 mt-2'>
-                <div className='bg-blue-400 px-4'>GET</div>
-                <p className='font-bold'>/{selectedSheetName}</p>
-                <p>Get all data from { selectedSheetName }</p>
-              </div>
-            </div>
+            <APIInfo selectedSheetName={selectedSheetName} />
 
           </div>
         ) : null}
